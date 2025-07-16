@@ -1,0 +1,235 @@
+{
+  "logger": {
+    "level": "info",
+    "timestamp": false
+  },
+  "esclient": {
+    "apiVersion": "7.5",
+    "hosts": [
+      {
+        "host": "elasticsearch"
+      }
+    ]
+  },
+  "elasticsearch": {
+    "settings": {
+      "index": {
+        "refresh_interval": "10s",
+        "number_of_replicas": "0",
+        "number_of_shards": "4"
+      }
+    }
+  },
+  "acceptance-tests": {
+    "endpoints": {
+      "docker": "http://api:4000/v1/"
+    }
+  },
+  "api": {
+    "services": {
+      "pip": {
+        "url": "http://pip:4200"
+      },
+      "libpostal": {
+        "url": "http://libpostal:4400"
+      },
+      "placeholder": {
+        "url": "http://placeholder:4100"
+      },
+      "interpolation": {
+        "url": "http://interpolation:4300"
+      }
+    }
+  },
+  "imports": {
+    "adminLookup": {
+      "enabled": true
+    },
+    "csv": {
+      "datapath": "/data/csv",
+      "files": [],
+      "download": []
+    },
+    "geonames": {
+      "datapath": "/data/geonames",
+      "countryCode": "US"
+    },
+    "openstreetmap": {
+      "download": [
+        {
+          "sourceURL": "http://download.geofabrik.de/north-america-latest.osm.pbf"
+        }
+      ],
+      "leveldbpath": "/tmp",
+      "datapath": "/data/openstreetmap",
+      "import": [
+        {
+          "filename": "north-america-latest.osm.pbf"
+        }
+      ]
+    },
+    "openaddresses": {
+      "datapath": "/data/openaddresses",
+      "files": [
+        "us/oh/allen.csv",
+        "us/oh/ashland.csv",
+        "us/oh/ashtabula.csv",
+        "us/oh/athens.csv",
+        "us/oh/auglaize.csv",
+        "us/oh/belmont.csv",
+        "us/oh/brown.csv",
+        "us/oh/butler.csv",
+        "us/oh/carroll.csv",
+        "us/oh/champaign.csv",
+        "us/oh/city_of_perrysburg.csv",
+        "us/oh/clark.csv",
+        "us/oh/clermont.csv",
+        "us/oh/clinton.csv",
+        "us/oh/columbiana.csv",
+        "us/oh/coshocton.csv",
+        "us/oh/crawford.csv",
+        "us/oh/cuyahoga.csv",
+        "us/oh/darke.csv",
+        "us/oh/defiance.csv",
+        "us/oh/delaware.csv",
+        "us/oh/erie.csv",
+        "us/oh/fairfield.csv",
+        "us/oh/fayette.csv",
+        "us/oh/franklin.csv",
+        "us/oh/fulton.csv",
+        "us/oh/gallia.csv",
+        "us/oh/geauga.csv",
+        "us/oh/greene.csv",
+        "us/oh/guernsey.csv",
+        "us/oh/hamilton.csv",
+        "us/oh/hancock.csv",
+        "us/oh/hardin.csv",
+        "us/oh/harrison.csv",
+        "us/oh/henry.csv",
+        "us/oh/highland.csv",
+        "us/oh/hocking.csv",
+        "us/oh/holmes.csv",
+        "us/oh/huron.csv",
+        "us/oh/jackson.csv",
+        "us/oh/jefferson.csv",
+        "us/oh/knox.csv",
+        "us/oh/lake.csv",
+        "us/oh/lawrence.csv",
+        "us/oh/licking.csv",
+        "us/oh/logan.csv",
+        "us/oh/lorain.csv",
+        "us/oh/lucas.csv",
+        "us/oh/madison.csv",
+        "us/oh/mahoning.csv",
+        "us/oh/marion.csv",
+        "us/oh/medina.csv",
+        "us/oh/meigs.csv",
+        "us/oh/mercer.csv",
+        "us/oh/miami.csv",
+        "us/oh/monroe.csv",
+        "us/oh/montgomery.csv",
+        "us/oh/morgan.csv",
+        "us/oh/morrow.csv",
+        "us/oh/muskingum.csv",
+        "us/oh/noble.csv",
+        "us/oh/ottawa.csv",
+        "us/oh/paulding.csv",
+        "us/oh/perry.csv",
+        "us/oh/pickaway.csv",
+        "us/oh/pike.csv",
+        "us/oh/portage.csv",
+        "us/oh/preble.csv",
+        "us/oh/putnam.csv",
+        "us/oh/richland.csv",
+        "us/oh/ross.csv",
+        "us/oh/sandusky.csv",
+        "us/oh/scioto.csv",
+        "us/oh/seneca.csv",
+        "us/oh/shelby.csv",
+        "us/oh/stark.csv",
+        "us/oh/summit.csv",
+        "us/oh/toledo.csv",
+        "us/oh/trumbull.csv",
+        "us/oh/tuscarawas.csv",
+        "us/oh/union.csv",
+        "us/oh/van_wert.csv",
+        "us/oh/vinton.csv",
+        "us/oh/warren.csv",
+        "us/oh/washington.csv",
+        "us/oh/wayne.csv",
+        "us/oh/williams.csv",
+        "us/oh/wood.csv",
+        "us/oh/wyandot.csv"
+      ]
+    },
+    "polyline": {
+      "datapath": "/data/polylines",
+      "files": [
+        "extract.0sv"
+      ]
+    },
+    "whosonfirst": {
+      "datapath": "/data/whosonfirst",
+      "importPostalcodes": true,
+      "countryCode": [
+        "AI",
+        "AG",
+        "AW",
+        "BS",
+        "BB",
+        "BZ",
+        "BM",
+        "BQ",
+        "BO",
+        "VG",
+        "KY",
+        "CA",
+        "CR",
+        "CU",
+        "CW",
+        "DM",
+        "DO",
+        "SV",
+        "GD",
+        "GL",
+        "GT",
+        "HT",
+        "HN",
+        "JM",
+        "MQ",
+        "MS",
+        "NI",
+        "VE",
+        "PA",
+        "PR",
+        "BL",
+        "KN",
+        "LC",
+        "PM",
+        "VC",
+        "SX",
+        "MF",
+        "MX",
+        "TT",
+        "TC",
+        "US",
+        "VI"
+      ],
+      "importPlace": "102191575"
+    },
+    "interpolation": {
+      "download": {
+        "tiger": {
+          "datapath": "/data/tiger",
+          "states": [
+            {
+              "state_code": 41,
+              "county_code": 67,
+              "name": "Washington County, OR"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
